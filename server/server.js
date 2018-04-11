@@ -7,11 +7,13 @@ app.use(express.static(__dirname + '/../client/dist'));
 app.use(bodyParser.json());
 
 app.get('/reviews', (req, res) => {
-    Reviews.find({nickname: 'Louis'}, (err, results)=>{
-        console.log('========', results);
-        res.send(results);
+    Reviews.find((err, results) => {
+        if (err) {
+            console.log(err);
+        } else {
+            res.send(results);
+        }
     });
-
 });
 
 app.listen(3005, () => console.log('Server listening on port 3005!'))
