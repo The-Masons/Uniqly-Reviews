@@ -1,4 +1,4 @@
-[{
+var sampleReviews = [{
     "product_id": 0,
     "nickname": "Hollis",
     "from": "Port Sonyahaven, Wisconsin",
@@ -9323,3 +9323,5 @@
     "verified_purchaser": false,
     "employee": true
 }]
+
+exports.sampleReviews = sampleReviews;

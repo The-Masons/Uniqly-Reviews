@@ -16,4 +16,16 @@ app.get('/reviews', (req, res) => {
     });
 });
 
+app.get('/reviews/:product_id', (req, res) => {
+    Reviews.find({
+        product_id: req.params.product_id
+    }, (err, results) => {
+        if (err) {
+            console.log(err);
+        } else {
+            res.send(results);
+        }
+    });
+});
+
 app.listen(3005, () => console.log('Server listening on port 3005!'))
