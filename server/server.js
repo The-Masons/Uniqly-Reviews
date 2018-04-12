@@ -11,7 +11,6 @@ app.get('/:id', function (req, res) {
 });
 
 app.get('/reviews', (req, res) => {
-    console.log('finding');
     Reviews.find((err, results) => {
         if (err) {
             console.log(err);
@@ -22,7 +21,6 @@ app.get('/reviews', (req, res) => {
 });
 
 app.get('/reviews/:product_id', (req, res) => {
-    console.log('aaaaaa', typeof req.params.product_id);
     Reviews.find({
          product_id: parseInt(req.params.product_id)
     }, (err, results) => {
