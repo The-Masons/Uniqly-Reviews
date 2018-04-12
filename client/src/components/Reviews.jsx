@@ -1,13 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
+import Review from './Review.jsx';
 
 class Reviews extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             productData: [],
-            product_id: '',
+            product_id: null,
         }
     }
 
@@ -22,15 +23,19 @@ class Reviews extends React.Component {
                     productData: response.data,
                     product_id: url
                 });
-            }).catch(function (error) {
+            })
+            .catch(function (error) {
                 console.log(error);
             })
     }
 
     render() {
         return (
-            <div>
-                <p>testing</p>
+            <div className='reviews'>
+                {this.state.productData.map((item, index) =>
+                    <Review key={index} reviewData={this.state.productData[index]} />
+                )
+                }
             </div>
         );
     }
