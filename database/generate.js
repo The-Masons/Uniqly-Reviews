@@ -18,6 +18,7 @@ for (var i = 0; i < 99; i++) {
         var waistSize = Math.floor(Math.random() * (35 - 28 + 1)) + 28;
         var hipsSize = Math.floor(Math.random() * (35 - 28 + 1)) + 28;
         var fitRating = Math.floor(Math.random() * 5) + 1;
+        var starRating = Math.floor(Math.random() * 5) + 1;
         var lengthRating = Math.floor(Math.random() * 5) + 1;
         var qualityRating = Math.floor(Math.random() * 5) + 1;
         var helpfulRating = Math.floor(Math.random() * 15);
@@ -36,6 +37,8 @@ for (var i = 0; i < 99; i++) {
             product_fit: fitRating,
             product_length: lengthRating,
             product_quality: qualityRating,
+            date: faker.date.past(),
+            rating: starRating,
             review_title: faker.lorem.words(),
             review_body: faker.lorem.sentences(),
             recommended: faker.random.boolean(),

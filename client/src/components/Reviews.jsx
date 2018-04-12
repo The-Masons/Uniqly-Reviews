@@ -6,26 +6,31 @@ class Reviews extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            data: []
+            productData: [],
+            product_id: '',
         }
     }
 
-    componentWillMount(){
-        axios.get('/reviews')
-            .then((results)=>{
-                this.setState({
-                    data: results.data
-                })
-                console.log(results.data);
-            })
-            .catch((error)=>{
+    componentDidMount() {
+        const context = this;
+        var url = window.location.href.split('/').pop();
+        (url.length > 0) ? null : url = '0';
+        axios.get('/reviews/' + url)
+            .then(function (response) {
+                console.log(response);
+                context.setState({
+                    productData: response.data,
+                    product_id: url
+                });
+            }).catch(function (error) {
                 console.log(error);
             })
     }
+
     render() {
         return (
             <div>
-                <p>hello</p>
+                <p>testing</p>
             </div>
         );
     }

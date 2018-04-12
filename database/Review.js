@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const db = require('./index.js');
 
 const reviewSchema = new mongoose.Schema({
-	product_id: String,
+	product_id: Number,
 	nickname: String,
 	from: String,
 	size_purchased: String,

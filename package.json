@@ -8,6 +8,7 @@
   "scripts": {
     "test": "mocha",
     "start": "nodemon ./server/server.js",
+    "generate": "node database/generate.js",
     "db-setup": "node database/seed.js",
     "app-dev": "webpack -d --watch"
   },
