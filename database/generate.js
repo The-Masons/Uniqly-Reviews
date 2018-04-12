@@ -7,7 +7,7 @@ var ageArray = ['17 or under', '18 to 24', '25 to 34', '35 to 44,', '45 to 54', 
 var genderArray = ['M', 'F'];
 
 var data = [];
-for (var i = 0; i < 99; i++) {
+for (var i = 0; i < 100; i++) {
     for (var j = 0; j < Math.floor(Math.random() * 5) + 3; j++) {
 
         var pickAge = Math.floor(Math.random() * ageArray.length);
