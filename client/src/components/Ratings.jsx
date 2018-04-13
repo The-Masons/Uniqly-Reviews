@@ -12,8 +12,11 @@ class Ratings extends React.Component {
     render() {
         return (
             <div className='review-ratings'>
-                Rating
-                <div>[X] [X] [X] [X] [X]</div>
+                <div className='rating-title'>Rating</div>
+                <div className='rating-meter'>[X] [X] [X] [X] [X]</div>
+                <div><span>LENGTH  </span><span className='length-meter'>  --------------O---------------</span></div>
+                <div><span>QUALITY </span><span className='quality-meter'>--------------------O--------</span></div>
+
             </div>
         );
     }
