@@ -33,7 +33,7 @@ for (var i = 0; i < 100; i++) {
             received_free_product: faker.random.boolean(),
             chest_size: chestSize,
             waist_size: waistSize,
-            height: pickHeight,
+            height: heightArray[pickHeight],
             hips_size: hipsSize,
             product_fit: fitRating,
             product_length: lengthRating,

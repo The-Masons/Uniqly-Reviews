@@ -11,9 +11,9 @@ var UserInfo = (props)=>{
                 <div><b>Height: </b>{props.reviewData.height}</div>
                 <div><b>Age: </b>{props.reviewData.age}</div>
                 <div><b>Gender: </b>{props.reviewData.gender}</div>
-                <div><b>Chest size: </b>{props.reviewData.chest_size}</div>
-                <div><b>Waist size: </b>{props.reviewData.waist_size}</div>
-                <div><b>Hips size: </b>{props.reviewData.hips_size}</div>
+                <div><b>Chest size: </b>{props.reviewData.chest_size}"</div>
+                <div><b>Waist size: </b>{props.reviewData.waist_size}"</div>
+                <div><b>Hips size: </b>{props.reviewData.hips_size}"</div>
             </div>
     )
 }

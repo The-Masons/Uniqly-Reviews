@@ -10,16 +10,6 @@ app.get('/:product_id', (req, res) => {
     res.sendFile(path.join(__dirname + '/../client/dist/index.html'));
 });
 
-app.get('/reviews', (req, res) => {
-    Reviews.find((err, results) => {
-        if (err) {
-            console.log(err);
-        } else {
-            res.send(results);
-        }
-    });
-});
-
 app.get('/reviews/:product_id', (req, res) => {
     Reviews.find({
         product_id: parseInt(req.params.product_id)
