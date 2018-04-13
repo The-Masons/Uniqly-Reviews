@@ -12,7 +12,8 @@ class Ratings extends React.Component {
     render() {
         return (
             <div className='review-ratings'>
-                Review Ratings
+                Rating
+                <div>[X] [X] [X] [X] [X]</div>
             </div>
         );
     }
