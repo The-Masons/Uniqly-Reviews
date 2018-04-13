@@ -15,7 +15,7 @@ class Review extends React.Component {
     render() {
         return (
             <div className='review-component'>
-                <UserInfo reviewData={this.props.reviewData}/><Body /><Ratings />
+                <UserInfo reviewData={this.props.reviewData}/><Body reviewData={this.props.reviewData}/><Ratings reviewData={this.props.reviewData}/>
             </div>
         );
     }

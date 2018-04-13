@@ -3,14 +3,32 @@
 }
 
 .review-component {
-  border: solid 1px;
   display: flex;
   flex-direction: row;
+  color: #454545;
+  font-family: Trebuchet MS,sans-serif;
+}
+
+.review-date{
+  color: #696969;
+  line-height: 1;
+  font-size: 12px;
 }
 
 .review-body {
+  color: #000000;
+  font-size: 16px;
+  line-height: 2em;
   padding: 50px;
   width: 40%;
+}
+
+.review-title {
+  font-size: 24px;
+  color: #000000;
+  font-style: normal;
+  text-transform: uppercase;
+  padding-bottom: 18px
 }
 
 .review-ratings {
@@ -19,16 +37,17 @@
 }
 
 .review-userinfo {
-  padding: 50px;
-  font-family: UniqloRegularRegular,arial;
-  font-size: 14px;
+  font-family: "DIN Next W01 Regular", Trebuchet MS, sans-serif;
   color: #696969;
+  font-size: 14px;
+  line-height: 1.5em;
+  padding: 50px;
   width: 15%;
 }
 
 .userinfo-nickname {
-  color: black;
-  font-family: "DIN Next W01 Regular",arial;
+  color: #000000;
+
   font-size: 16px;
   font-weight: bold;
 }

@@ -10,9 +10,14 @@ class Body extends React.Component {
     }
 
     render() {
+        var date = this.props.reviewData.date;
+        date = date.split('-');
+        date = date[1]+' / '+date[2].slice(0,2)+' / '+date[0];
         return (
             <div className='review-body'>
-                Review Body
+                <div className='review-date'>{date}</div>
+                <div className='review-title'><b>{this.props.reviewData.review_title}</b></div>
+                <div>{this.props.reviewData.review_body}</div>
             </div>
         );
     }

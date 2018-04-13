@@ -13,8 +13,7 @@ var UserInfo = (props)=>{
                 <div><b>Gender: </b>{props.reviewData.gender}</div>
                 <div><b>Chest size: </b>{props.reviewData.chest_size}</div>
                 <div><b>Waist size: </b>{props.reviewData.waist_size}</div>
-                <div><b>Hips size: </b>{props.reviewData.hip_size}</div>
-                <div><b>Waist size: </b>{props.reviewData.waist_size}</div>
+                <div><b>Hips size: </b>{props.reviewData.hips_size}</div>
             </div>
     )
 }
