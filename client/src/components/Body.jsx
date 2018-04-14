@@ -18,6 +18,9 @@ class Body extends React.Component {
                 <div className='review-date'>{date}</div>
                 <div className='review-title'><b>{this.props.reviewData.review_title}</b></div>
                 <div>{this.props.reviewData.review_body}</div>
+                <div className='review-helpful'><span className='review-helpful-text'>Was this review helpful?</span>
+                <span><button className='button-thumbs'><img src="https://i.imgur.com/7RPAVLL.png"></img></button></span> <span><button className='button-thumbs'><img src='https://i.imgur.com/mip0AGG.png'></img></button></span>
+                </div>
             </div>
         );
     }

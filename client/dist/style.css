@@ -1,10 +1,32 @@
+.button-thumbs {
+  border: 0;
+  padding: 2px;
+  background: #c7c7c7 no-repeat scroll 0 0;
+  text-align: center;
+  margin: auto;
+}
+
 .length-meter {
   padding-left: 15px;
 }
 
+.fit-meter {
+  padding-left: 55px;
+}
+
+.overall-ratings {
+  font-family: Trebuchet MS, sans-serif;
+  padding-bottom: 50px;
+}
+
+.overall-rating-title {
+  padding-left: 75px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
 .quality-meter {
   padding-left: 15px;
-
 }
 
 .rating-meter {
@@ -29,6 +51,12 @@
   font-family: Trebuchet MS, sans-serif;
 }
 
+.review-helpful {
+  color: #696969;
+  padding: 150px 0px;
+  font-weight: bold;
+}
+
 .review-date {
   color: #696969;
   line-height: 1;
@@ -40,7 +68,7 @@
   font-size: 16px;
   line-height: 2em;
   width: 50%;
-  padding: 0 120px 50px 0;
+  padding: 0 120px 75px 0;
 }
 
 .review-title {
@@ -66,22 +94,30 @@
   padding: 0 50px 50px 0;
 }
 
-.slider-description{
+.review-helpful {
+  padding-top: 40px;
+}
+
+.review-helpful-text {
+  padding-right: 50px;
+}
+
+.slider-description {
   font-size: 12px;
   padding-bottom: 20px;
 }
-.slider-description-left{
+
+.slider-description-left {
   padding-left: 85px;
 }
 
-.slider-description-right-length{
+.slider-description-right-length {
   padding-left: 85px;
 }
 
-.slider-description-right-quality{
+.slider-description-right-quality {
   padding-left: 120px;
 }
-
 
 .userinfo-nickname {
   color: #000000;

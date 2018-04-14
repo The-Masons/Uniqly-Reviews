@@ -45,9 +45,9 @@ class Ratings extends React.Component {
                 <div className='rating-title'>Rating</div>
                 <div className='rating-meter'><img src={this.state.starRating}></img></div>
                 <div><span>LENGTH </span>&nbsp;<span className='length-meter'><img src={this.state.lengthRating}></img></span></div>
-                <div class='slider-description'><span class='slider-description-left'>Very Short</span><span className='slider-description-right-length'>Very Long</span></div>
+                <div className='slider-description'><span className='slider-description-left'>Very Short</span><span className='slider-description-right-length'>Very Long</span></div>
                 <div><span>QUALITY</span>&nbsp;<span className='quality-meter'><img src={this.state.qualityRating}></img></span></div>
-                <div class='slider-description'><span class='slider-description-left'>Poor</span><span className='slider-description-right-quality'>Perfect</span></div>
+                <div className='slider-description'><span className='slider-description-left'>Poor</span><span className='slider-description-right-quality'>Perfect</span></div>
             </div>
         );
     }
