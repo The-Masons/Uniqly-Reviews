@@ -25,7 +25,6 @@ class OverallRatings extends React.Component {
             productQualityAvg += this.props.reviewData[i].product_quality;
             starCount[this.props.reviewData[i].rating] = 1 + (starCount[this.props.reviewData[i].rating] || 0);
         }
-        console.log(starCount);
         bar5length = Math.floor((starCount[5] / this.props.reviewData.length) * 100) * 2;
         bar4length = Math.floor((starCount[4] / this.props.reviewData.length) * 100) * 2;
         bar3length = Math.floor((starCount[3] / this.props.reviewData.length) * 100) * 2;
@@ -63,9 +62,9 @@ class OverallRatings extends React.Component {
                         <div className='overall-rating-title'>
                             WRITE A REVIEW
                     </div>
-                        <p className='review-feedback'> Tell us what you think about this product. We value your feedback.
+                        <p className='review-feedback'> Tell us what you think about this product. We value your feedback.</p>
                     <div className='padding'></div>
-                            <button className='review-feedback-button'>WRITE A REVIEW</button></p>
+                            <button className='review-feedback-button'>WRITE A REVIEW</button>
                     </div>
                 </div>
                 <div className='padding' style={{ padding: '30px' }}></div>
