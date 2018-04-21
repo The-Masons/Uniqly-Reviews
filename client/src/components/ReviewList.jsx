@@ -38,8 +38,7 @@ class ReviewList extends React.Component {
                 {this.state.productData.map((item, index) =>
                     <div key={index}>
                         <Review reviewData={this.state.productData[index]} />
-                    </div>
-                )
+                    </div>)
                 }
             </div>
         );
