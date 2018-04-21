@@ -50,8 +50,7 @@ class OverallRatings extends React.Component {
 
                     <div className='review-ratings'>
                         {barlength.map((item, index) =>
-                            <div className='overall-rating-mini'><div className='bar-title'>{5 - index} STAR</div> <div style={{ width: barlength[index] + 'px' }} className='bar-left'></div><div style={{ width: 200 - barlength[index] + 'px' }} className='bar-right'></div><div className='bar-count'>{starCount[5 - index]}</div></div>
-
+                            <div key={index} className='overall-rating-mini'><div className='bar-title'>{5 - index} STAR</div> <div style={{ width: barlength[index] + 'px' }} className='bar-left'></div><div style={{ width: 200 - barlength[index] + 'px' }} className='bar-right'></div><div className='bar-count'>{starCount[5 - index]}</div></div>
                         )}
                     </div>
 
