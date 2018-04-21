@@ -4,7 +4,7 @@ import axios from 'axios';
 import Review from './Review.jsx';
 import OverallRatings from './OverallRatings.jsx';
 
-class Reviews extends React.Component {
+class ReviewList extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -47,4 +47,4 @@ class Reviews extends React.Component {
     }
 }
 
-export default Reviews;
+export default ReviewList;
