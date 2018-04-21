@@ -15,7 +15,7 @@ class Reviews extends React.Component {
 
     componentDidMount() {
         const context = this;
-        var url = window.location.href.split('/').pop();
+        let url = window.location.href.split('/').pop();
         (url.length > 0) ? null : url = '0';
         axios.get('/reviews/' + url)
             .then(function (response) {

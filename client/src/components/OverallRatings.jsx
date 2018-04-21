@@ -18,7 +18,7 @@ class OverallRatings extends React.Component {
             starCount = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 },
             bar5length = 0, bar4length = 0, bar3length = 0, bar2length = 0, bar1length = 0;
 
-        for (var i = 0; i < this.props.reviewData.length; i++) {
+        for (let i = 0; i < this.props.reviewData.length; i++) {
             starRatingAvg += this.props.reviewData[i].rating;
             productFitAvg += this.props.reviewData[i].product_fit;
             productLengthAvg += this.props.reviewData[i].product_length;

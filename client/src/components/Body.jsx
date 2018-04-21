@@ -10,7 +10,7 @@ class Body extends React.Component {
     }
 
     render() {
-        var date = this.props.reviewData.date;
+        let date = this.props.reviewData.date;
         date = date.split('-');
         date = date[1]+' / '+date[2].slice(0,2)+' / '+date[0];
         return (
