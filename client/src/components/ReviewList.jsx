@@ -4,7 +4,7 @@ import axios from 'axios';
 import Review from './Review.jsx';
 import OverallRatings from './OverallRatings.jsx';
 
-class Reviews extends React.Component {
+class ReviewList extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -15,11 +15,10 @@ class Reviews extends React.Component {
 
     componentDidMount() {
         const context = this;
-        var url = window.location.href.split('/').pop();
+        let url = window.location.href.split('/').pop();
         (url.length > 0) ? null : url = '0';
         axios.get('/reviews/' + url)
             .then(function (response) {
-                console.log(response);
                 context.setState({
                     productData: response.data,
                     product_id: url
@@ -39,12 +38,11 @@ class Reviews extends React.Component {
                 {this.state.productData.map((item, index) =>
                     <div key={index}>
                         <Review reviewData={this.state.productData[index]} />
-                    </div>
-                )
+                    </div>)
                 }
             </div>
         );
     }
 }
 
-export default Reviews;
+export default ReviewList;

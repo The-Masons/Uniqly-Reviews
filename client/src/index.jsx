@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Reviews from './components/Reviews.jsx';
+import ReviewList from './components/ReviewList.jsx';
 
 var App = () =>{
-   return <Reviews/>
+   return <ReviewList/>
 }
 
 ReactDOM.render(<App />, document.getElementById('app'));

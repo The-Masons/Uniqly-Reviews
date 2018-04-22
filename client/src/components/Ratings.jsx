@@ -18,14 +18,14 @@ class Ratings extends React.Component {
     }
 
     setRatings() {
-        var ratingUrls = [
+        let ratingUrls = [
             'https://i.imgur.com/IaFTATj.png',
             'https://i.imgur.com/iZMWhUN.png',
             'https://i.imgur.com/lns6OZ4.png',
             'https://i.imgur.com/TOTBzNY.png',
             'https://i.imgur.com/8uXuBst.png']
 
-        var sliderUrls = [
+        let sliderUrls = [
             'https://i.imgur.com/HOnAtsW.png',
             'https://i.imgur.com/tySGtVQ.png',
             'https://i.imgur.com/P8ZeyGW.png',

@@ -18,19 +18,17 @@ class OverallRatings extends React.Component {
             starCount = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 },
             bar5length = 0, bar4length = 0, bar3length = 0, bar2length = 0, bar1length = 0;
 
-        for (var i = 0; i < this.props.reviewData.length; i++) {
+        for (let i = 0; i < this.props.reviewData.length; i++) {
             starRatingAvg += this.props.reviewData[i].rating;
             productFitAvg += this.props.reviewData[i].product_fit;
             productLengthAvg += this.props.reviewData[i].product_length;
             productQualityAvg += this.props.reviewData[i].product_quality;
             starCount[this.props.reviewData[i].rating] = 1 + (starCount[this.props.reviewData[i].rating] || 0);
         }
-        console.log(starCount);
-        bar5length = Math.floor((starCount[5] / this.props.reviewData.length) * 100) * 2;
-        bar4length = Math.floor((starCount[4] / this.props.reviewData.length) * 100) * 2;
-        bar3length = Math.floor((starCount[3] / this.props.reviewData.length) * 100) * 2;
-        bar2length = Math.floor((starCount[2] / this.props.reviewData.length) * 100) * 2;
-        bar1length = Math.floor((starCount[1] / this.props.reviewData.length) * 100) * 2;
+        let barlength = [];
+        for (let i = 5; i > 0; i--) {
+            barlength.push(Math.floor((starCount[i] / this.props.reviewData.length) * 100) * 2);
+        }
         starRatingAvg = OverallRatings.ratingUrls[Math.floor(starRatingAvg / this.props.reviewData.length)];
         productFitAvg = OverallRatings.sliderUrls[Math.floor(productFitAvg / this.props.reviewData.length)];
         productLengthAvg = OverallRatings.sliderUrls[Math.floor(productLengthAvg / this.props.reviewData.length)];
@@ -51,21 +49,18 @@ class OverallRatings extends React.Component {
                     </div>
 
                     <div className='review-ratings'>
-                        <div className='overall-rating-title'>RATING DISTRIBUTION</div>
-                        <div className='overall-rating-mini'><div className='bar-title'>5 STAR</div> <div style={{ width: bar5length + 'px' }} className='bar-left'></div><div style={{ width: 200 - bar5length + 'px' }} className='bar-right'></div><div className='bar-count'>{starCount[5]}</div></div>
-                        <div className='overall-rating-mini'><div className='bar-title'>4 STAR</div> <div style={{ width: bar4length + 'px' }} className='bar-left'></div><div style={{ width: 200 - bar4length + 'px' }} className='bar-right'></div><div className='bar-count'>{starCount[4]}</div></div>
-                        <div className='overall-rating-mini'><div className='bar-title'>3 STAR</div> <div style={{ width: bar3length + 'px' }} className='bar-left'></div><div style={{ width: 200 - bar3length + 'px' }} className='bar-right'></div><div className='bar-count'>{starCount[3]}</div></div>
-                        <div className='overall-rating-mini'><div className='bar-title'>2 STAR</div> <div style={{ width: bar2length + 'px' }} className='bar-left'></div><div style={{ width: 200 - bar2length + 'px' }} className='bar-right'></div><div className='bar-count'>{starCount[2]}</div></div>
-                        <div className='overall-rating-mini'><div className='bar-title'>1 STAR</div> <div style={{ width: bar1length + 'px' }} className='bar-left'></div><div style={{ width: 200 - bar1length + 'px' }} className='bar-right'></div><div className='bar-count'>{starCount[1]}</div></div>
+                        {barlength.map((item, index) =>
+                            <div key={index} className='overall-rating-mini'><div className='bar-title'>{5 - index} STAR</div> <div style={{ width: barlength[index] + 'px' }} className='bar-left'></div><div style={{ width: 200 - barlength[index] + 'px' }} className='bar-right'></div><div className='bar-count'>{starCount[5 - index]}</div></div>
+                        )}
                     </div>
 
                     <div className='review-ratings'>
                         <div className='overall-rating-title'>
                             WRITE A REVIEW
                     </div>
-                        <p className='review-feedback'> Tell us what you think about this product. We value your feedback.
-                    <div className='padding'></div>
-                            <button className='review-feedback-button'>WRITE A REVIEW</button></p>
+                        <p className='review-feedback'> Tell us what you think about this product. We value your feedback.</p>
+                        <div className='padding'></div>
+                        <button className='review-feedback-button'>WRITE A REVIEW</button>
                     </div>
                 </div>
                 <div className='padding' style={{ padding: '30px' }}></div>
