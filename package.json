@@ -6,7 +6,6 @@
   "author": "Louis Mun",
   "license": "MIT",
   "scripts": {
-    "test-app": "node ./client/src/components/ReviewBody.test.jsx",
     "start": "nodemon ./server/server.js",
     "generate": "node database/generate.js",
     "db-setup": "node database/seed.js",
