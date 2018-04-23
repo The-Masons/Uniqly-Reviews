@@ -10,7 +10,6 @@ let ReviewBody = (props) => {
     return (
         <div className='review-body'>
             <div className='review-date'>{date}</div>
-            <p>testing</p>
             <div className='review-title'><b>{props.reviewData.review_title}</b></div>
             <div>{props.reviewData.review_body}</div>
             <div className='review-helpful'><span className='review-helpful-text'>Was this review helpful?</span>
