@@ -1,4 +1,4 @@
-var sampleReviews = [{
+let sampleReviews = [{
     "product_id": 0,
     "nickname": "Edyth",
     "from": "South Milfordchester, Wisconsin",

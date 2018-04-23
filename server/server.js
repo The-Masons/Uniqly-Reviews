@@ -17,6 +17,7 @@ app.get('/reviews/:product_id', (req, res) => {
         if (err) {
             console.log(err);
         } else {
+            console.log(results);
             res.send(results);
         }
     });
