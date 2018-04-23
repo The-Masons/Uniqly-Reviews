@@ -11,10 +11,10 @@ it('renders without crashing', () => {
 
 describe('UserInfo', () => {
   test('should render with the correct items', () => {
-    const itemPicker = mount(
+    const mounted = mount(
       <UserInfo
         reviewData={sampleReviews}/>
       );
-    expect(UserInfo).toMatchSnapshot();
+    expect(mounted).toMatchSnapshot();
   });
 });

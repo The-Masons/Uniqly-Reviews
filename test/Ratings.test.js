@@ -15,6 +15,6 @@ describe('Ratings', () => {
       <Ratings
         reviewData={sampleReviews}/>
       );
-    expect(Ratings).toMatchSnapshot();
+    expect(itemPicker).toMatchSnapshot();
   });
 });
