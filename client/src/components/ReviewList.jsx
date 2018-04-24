@@ -17,7 +17,7 @@ class ReviewList extends React.Component {
         const context = this;
         let url = window.location.href.split('/').pop();
         (url.length > 0) ? null : url = '0';
-        axios.get('/reviews/' + url)
+        axios.get('http://localhost:3005/reviews/' + url)
             .then(function (response) {
                 context.setState({
                     productData: response.data,
