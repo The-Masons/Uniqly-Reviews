@@ -11,7 +11,7 @@ app.get('/:product_id', (req, res) => {
     res.sendFile(path.join(__dirname + '/../client/dist/index.html'));
 });
 
-app.get('/products/:product_id', (req, res) => {
+app.get('/product/:product_id', (req, res) => {
     res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
     res.sendFile(path.join(__dirname + '/../client/dist/index.html'));
 });
