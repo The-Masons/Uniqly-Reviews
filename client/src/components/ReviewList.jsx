@@ -9,7 +9,7 @@ class ReviewList extends React.Component {
         super(props);
         this.state = {
             productData: [],
-            product_id: null,
+            product_id: 0,
         }
     }
 
