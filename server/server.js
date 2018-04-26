@@ -7,12 +7,12 @@ app.use(express.static(__dirname + '/../client/dist'));
 app.use(bodyParser.json());
 
 app.get('/:product_id', (req, res) => {
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
+    res.setHeader('Access-Control-Allow-Origin', '*');
     res.sendFile(path.join(__dirname + '/../client/dist/index.html'));
 });
 
 app.get('/product/:product_id', (req, res) => {
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
+    res.setHeader('Access-Control-Allow-Origin', '*');
     res.sendFile(path.join(__dirname + '/../client/dist/index.html'));
 });
 
@@ -23,7 +23,7 @@ app.get('/reviews/:product_id', (req, res) => {
         if (err) {
             console.log(err);
         } else {
-            res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
+            res.setHeader('Access-Control-Allow-Origin', '*');
             console.log(results);
             res.send(results);
         }

@@ -10,7 +10,9 @@
     "generate": "node database/generate.js",
     "db-setup": "node database/seed.js",
     "app-dev": "webpack -d --watch",
-    "test": "jest --coverage"
+    "server-dev": "node ./server/server.js",
+    "test": "jest --coverage",
+    "docker": "npm run generate & npm run db-setup && npm run server-dev && webpack -d"
   },
   "jest": {
     "setupFiles": [
