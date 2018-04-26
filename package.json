@@ -31,7 +31,7 @@
     "mongoose": "^5.0.6",
     "mongoose-unique-validator": "^2.0.0",
     "mysql": "^2.15.0",
-    "nodemon": "^1.14.12",
+    "nodemon": "^1.17.3",
     "prop-types": "^15.6.0",
     "react": "^16.1.0",
     "react-dom": "^16.1.0",

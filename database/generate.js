@@ -1,3 +1,4 @@
+'use strict';
 let faker = require('faker');
 let fs = require('fs');
 
