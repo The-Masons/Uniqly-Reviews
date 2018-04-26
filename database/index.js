@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const mongoUri = 'mongodb://localhost/uniqly';
+const mongoUri = 'mongodb://mongo/uniqly';
 
 const db = mongoose.connect(mongoUri);
 
