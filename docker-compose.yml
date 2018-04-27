@@ -1,7 +1,7 @@
 version: "2"
 services:
   app:
-    image: reviews
+    image: uniqlyreviews_app
     container_name: uniqlyreviews_app
     ports:
       - "3005:3005"
