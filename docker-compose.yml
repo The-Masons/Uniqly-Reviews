@@ -1,8 +1,8 @@
 version: "2"
 services:
   app:
-    container_name: reviews
-    build: .
+    image: reviews
+    container_name: uniqlyreviews_app
     ports:
       - "3005:3005"
     depends_on:
@@ -10,3 +10,4 @@ services:
   mongo:
     container_name: mongo
     image: mongo:latest
+
